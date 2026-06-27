@@ -25,17 +25,6 @@
   const details = button.nextElementSibling;
   details.style.display = details.style.display === 'none' ? 'block' : 'none';
 }
-  const audios = document.querySelectorAll('track');
-
-audios.forEach((audio) => {
-    audio.addEventListener('play', () => {
-        audios.forEach((otherAudio) => {
-            if (otherAudio !== audio) {
-                otherAudio.pause();
-            }
-        });
-    });
-});
   
 </script>
 </head>
@@ -238,5 +227,17 @@ audios.forEach((audio) => {
        
 
   <script src="script.js"></script>
+      <script>
+          const audios = document.querySelectorAll('track');
+
+audios.forEach((audio) => {
+    audio.addEventListener('play', () => {
+        audios.forEach((otherAudio) => {
+            if (otherAudio !== audio) {
+                otherAudio.pause();
+            }
+        });
+    });
+});
 </body>
 </html>
