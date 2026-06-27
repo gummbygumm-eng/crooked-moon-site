@@ -113,15 +113,14 @@
     <!-- Repeat for all 25 tracks -->
     
     <script>
-        // Array of track elements
-        const tracks = document.querySelectorAll('.track');
-        let currentIndex = 0;
-
-        // Shuffle function
         document.getElementById('shuffleBtn').addEventListener('click', () => {
-            // Simple Fisher-Yates shuffle on track order
-            for (let i = tracks.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.
+    const trackContainer = document.querySelector('body'); // Or a specific parent container
+    const tracks = Array.from(document.querySelectorAll('.track'));
+
+    // Fisher-Yates shuffle
+    for (let i = tracks.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        trackContainer.appendChild(tracks[j]
 
   <nav class="topnav">
     <a href="#characters">Characters</a>
