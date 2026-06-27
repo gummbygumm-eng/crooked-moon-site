@@ -211,93 +211,79 @@
             </audio>
         </div>
 
-  <main>
-    <section id="characters" class="section">
-      <h2>Party Members</h2>
-
-     <div class="character-card">
-  <img src="1f0b0cda-f788-4159-b9e0-4142808494e4.png" alt="Silas Blackthorn" style="width: 40%; float: left; margin-right: 20px; border-radius: 10px;">
-  <div style="float: left;">
-    <h2>Silas Blackthorn</h2>
-    <p>Gunslinger / Bard (Level 10)</p>
-    <button onclick="showDetails(this)">Show Details</button>
-    <div class="details" style="display: none; clear: both;">
-      <section id="silas">
-  <h2>Stats</h2>
-  <div class="stats-block">
-    <p><strong>Class:</strong> Gunslinger 6 / Bard 4</p>
-    <p><strong>Level:</strong> 10</p>
-    <p><strong>Strength:</strong> 9 (-1)</p>
-    <p><strong>Dexterity:</strong> 15 (+2)</p>
-    <p><strong>Constitution:</strong> 11 (+0)</p>
-    <p><strong>Intelligence:</strong> 11 (+0)</p>
-    <p><strong>Wisdom:</strong> 12 (+1)</p>
-    <p><strong>Charisma:</strong> 17 (+3)</p>
-    <p><strong>Armor Class:</strong> 17</p>
-    <p><strong>Hit Points:</strong> 73</p>
-    <p><strong>Speed:</strong> 30 ft</p>
-    <p><strong>Proficiency Bonus:</strong> +4</p>
-    <p><strong>Passive Perception:</strong> 19</p>
-  </div>
-</section>
-      
-      <!-- Add all other stats -->
-    </div>
-  </div>
-</div>
-      
-</section>
-  </div>
-</article>
-    <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silas Blackthorn</title>
+  <body>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1c1c1c;
-            color: #e6d8b6;
-            margin: 0;
-            padding: 0;
+        .party-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px;
+            text-align: center;
+            color: #f5e6c8;
         }
-        .container {
-            display: flex;
-            flex-wrap: wrap;
+
+        .party-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
             justify-content: center;
-            padding: 2em;
+            align-items: start;
+            margin-top: 30px;
         }
-        .image {
-            flex: 1 1 300px;
-            max-width: 400px;
-            margin: 1em;
+
+        .party-card {
+            background: linear-gradient(145deg, #1a1412, #0d0b0a);
+            border: 1px solid rgba(255, 210, 122, 0.3);
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
         }
-        .image img {
+
+        .party-card:hover {
+            transform: translateY(-12px) scale(1.05);
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .party-card img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 12px;
+            margin-bottom: 15px;
         }
-        .stats {
-            flex: 2 1 400px;
-            background: #222;
-            margin: 1em;
-            padding: 1.5em;
-            border-radius: 10px;
+
+        .party-card h3 {
+            margin: 0 0 10px;
+            color: #ffd27a;
         }
-        h1, h2 {
-            color: #e6d8b6;
+
+        .party-card p {
+            margin: 0;
+            color: #d8c6a3;
+            font-size: 0.95rem;
         }
-        p {
-            line-height: 1.5;
-        }
-        .section-title {
-            font-size: 1.5em;
-            margin-top: 1em;
-        }
-        .backstory {
-            margin-top: 2em;
-            font-style: italic;
+
+        @media (max-width: 650px) {
+            .party-section {
+                padding: 25px 15px;
+            }
+            .party-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
+
+    <!-- Other content, like header, nav, etc. -->
+
+    <main>
+        <section class="party-section">
+            <h2>Meet the Party</h2>
+            <div class="party-grid" id="party-container">
+                <!-- Cards will be injected here by the script -->
+            </div>
+        </section>
+    </main>
+
+    
       
     
 
