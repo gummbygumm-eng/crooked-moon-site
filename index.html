@@ -25,6 +25,18 @@
   const details = button.nextElementSibling;
   details.style.display = details.style.display === 'none' ? 'block' : 'none';
 }
+  const audios = document.querySelectorAll('track');
+
+audios.forEach((audio) => {
+    audio.addEventListener('play', () => {
+        audios.forEach((otherAudio) => {
+            if (otherAudio !== audio) {
+                otherAudio.pause();
+            }
+        });
+    });
+});
+  
 </script>
 </head>
 <body>
@@ -104,7 +116,7 @@
     <h1>My D&D Playlist</h1>
     
 
-  <div class="playlist">
+
   <div class="track">
         <p><strong>Follow the Echo</strong> - SILAS BLACKTHORN</p>
         <audio controls>
@@ -128,6 +140,9 @@
             Your browser does not support audio.
         </audio>
     </div>
+ 
+   
+   
 
   <main>
     <section id="characters" class="section">
