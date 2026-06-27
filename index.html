@@ -58,48 +58,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #eee;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        .track {
-            margin: 15px 0;
-            background-color: #222;
-            padding: 10px;
-            border-radius: 8px;
-        }
-        .track button {
-            margin-left: 10px;
-            padding: 5px 10px;
-            background-color: #555;
-            color: #eee;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        .track button:hover {
-            background-color: #777;
-        }
-        #shuffleBtn {
-            display: block;
-            margin: 30px auto;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-        #shuffleBtn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: radial-gradient(circle at top, #2a0f0f, #090909 70%);
+    color: #f5e6c8;
+}
+
+.music-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.music-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #f5d28c;
+}
+
+.music-subtitle {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 35px;
+    color: #d8c6a3;
+}
+
+.track-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.track1 {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(245, 210, 140, 0.18);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    backdrop-filter: blur(4px);
+}
+
+.track1:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+}
+
+.track1 p {
+    margin: 0 0 12px 0;
+    font-size: 1.05rem;
+    line-height: 1.4;
+    color: #f5e6c8;
+}
+
+.track1 strong {
+    color: #ffd27a;
+}
+
+.track1 audio {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .music-section {
+        padding: 15px;
+        margin: 25px auto;
+    }
+
+    .music-title {
+        font-size: 1.7rem;
+    }
+}
+</style>
 </head>
 <body>
     <h1>My D&D Playlist</h1>
