@@ -21,6 +21,10 @@
     document.getElementById('characters').style.display = 'block';
     window.location.hash = 'characters';
   }
+  function showDetails(button) {
+  const details = button.nextElementSibling;
+  details.style.display = details.style.display === 'none' ? 'block' : 'none';
+}
 </script>
 </head>
 <body>
