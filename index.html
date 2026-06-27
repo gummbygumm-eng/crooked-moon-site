@@ -225,20 +225,19 @@
        
 
   <script src="script.js"></script>
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const audios = document.querySelectorAll(".track1");
+ <script>
+document.addEventListener("play", function (event) {
+    if (event.target.tagName === "AUDIO") {
+        const allAudios = document.querySelectorAll("audio");
 
-    audios.forEach(function (audio) {
-        audio.addEventListener("play", function () {
-            audios.forEach(function (otherAudio) {
-                if (otherAudio !== audio) {
-                    otherAudio.pause();
-                }
-            });
+        allAudios.forEach(function (audio) {
+            if (audio !== event.target) {
+                audio.pause();
+                audio.currentTime = audio.currentTime;
+            }
         });
-    });
-});
+    }
+}, true);
 </script>
 </body>
 </html>
