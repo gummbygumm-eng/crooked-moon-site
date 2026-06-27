@@ -53,17 +53,14 @@
       <h2>Party Members</h2>
       <p class="section-text">Click a card to reveal a memory, secret, or rumor.</p>
 
-      <article class="card">
-  <img src="silas-image.jpg" alt="Silas Blackthorn" style="width: 100%; border-radius: 10px;">
-  <h3>Silas Blackthorn</h3>
-  <p class="role">Elf Bard / Gunslinger</p>
-  <p>A dark western bounty hunter with a fiddle, a revolver, and a white feather that falls through ash.</p>
-  <button onclick="showDetails(this)">Show Details</button>
-  <div class="details" style="display:none;">
-    <h3>Silas Blackthorn – Stats</h3>
-    <p><strong>Class:</strong> Gunslinger 6 / Bard 4</p>
-    <p><strong>Level:</strong> 10</p>
-     <section id="silas">
+     <div class="character-card">
+  <img src="silas-image.jpg" alt="Silas Blackthorn" style="width: 40%; float: left; margin-right: 20px; border-radius: 10px;">
+  <div style="float: left;">
+    <h2>Silas Blackthorn</h2>
+    <p>Gunslinger / Bard (Level 10)</p>
+    <button onclick="showDetails(this)">Show Details</button>
+    <div class="details" style="display: none; clear: both;">
+      <section id="silas">
   <h2>Silas Blackthorn – Stats</h2>
   <div class="stats-block">
     <p><strong>Class:</strong> Gunslinger 6 / Bard 4</p>
@@ -80,6 +77,13 @@
     <p><strong>Proficiency Bonus:</strong> +4</p>
     <p><strong>Passive Perception:</strong> 19</p>
   </div>
+</section>
+      
+      <!-- Add all other stats -->
+    </div>
+  </div>
+</div>
+      
 </section>
   </div>
 </article>
