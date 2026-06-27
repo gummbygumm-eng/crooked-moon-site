@@ -129,21 +129,7 @@
             Your browser does not support audio.
         </audio>
     </div>
-  <script>
-          const audios = document.querySelectorAll('.track1');
-
-audios.forEach((audio) => {
-    audio.addEventListener('play', () => {
-        audios.forEach((otherAudio) => {
-            if (otherAudio !== audio) {
-                otherAudio.pause();
-            }
-        });
-    });
-});
-      </script>
-   
-   
+  
 
   <main>
     <section id="characters" class="section">
@@ -239,6 +225,20 @@ audios.forEach((audio) => {
        
 
   <script src="script.js"></script>
-  
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const audios = document.querySelectorAll(".track1");
+
+    audios.forEach(function (audio) {
+        audio.addEventListener("play", function () {
+            audios.forEach(function (otherAudio) {
+                if (otherAudio !== audio) {
+                    otherAudio.pause();
+                }
+            });
+        });
+    });
+});
+</script>
 </body>
 </html>
