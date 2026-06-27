@@ -225,15 +225,19 @@
        
 
   <script src="script.js"></script>
- <script>
+<script>
 document.addEventListener("play", function (event) {
     if (event.target.tagName === "AUDIO") {
+        const clickedAudio = event.target;
         const allAudios = document.querySelectorAll("audio");
 
+        // Start the song over every time play is pressed
+        clickedAudio.currentTime = 0;
+
+        // Pause every other song
         allAudios.forEach(function (audio) {
-            if (audio !== event.target) {
+            if (audio !== clickedAudio) {
                 audio.pause();
-                audio.currentTime = audio.currentTime;
             }
         });
     }
