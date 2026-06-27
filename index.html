@@ -40,6 +40,88 @@
       <a href="#sessions" class="ghost">Last Session</a>
     </div>
   </header>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #eee;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .track {
+            margin: 15px 0;
+            background-color: #222;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .track button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #555;
+            color: #eee;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .track button:hover {
+            background-color: #777;
+        }
+        #shuffleBtn {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #shuffleBtn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>My D&D Playlist</h1>
+    <button id="shuffleBtn">Shuffle Playlist</button>
+
+    <div class="track">
+        <p><strong>Song Title 1</strong> - Artist Name</p>
+        <audio controls>
+            <source src="follow the echo (1).mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+    </div>
+
+    <div class="track">
+        <p><strong>Song Title 2</strong> - Artist Name</p>
+        <audio controls>
+            <source src="song thats never played .mp3" type="audio/mpeg">
+            Your browser does not support audio.
+        </audio>
+    </div>
+
+    <!-- Repeat for all 25 tracks -->
+    
+    <script>
+        // Array of track elements
+        const tracks = document.querySelectorAll('.track');
+        let currentIndex = 0;
+
+        // Shuffle function
+        document.getElementById('shuffleBtn').addEventListener('click', () => {
+            // Simple Fisher-Yates shuffle on track order
+            for (let i = tracks.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.
 
   <nav class="topnav">
     <a href="#characters">Characters</a>
