@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Crooked Moon Party</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+  #characters { display: none; }
+  .card { 
+    border: 2px solid #d19a5e;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 10px;
+    background: #221c1c;
+  }
+</style>
+<script>
+  function showParty() {
+    document.getElementById('characters').style.display = 'block';
+    window.location.hash = 'characters';
+  }
+</script>
 </head>
 <body>
   <div class="mist"></div>
