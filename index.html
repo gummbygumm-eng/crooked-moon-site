@@ -115,8 +115,8 @@
     
     <script>
         document.getElementById('shuffleBtn').addEventListener('click', () => {
-    const trackContainer = document.querySelector('.playlist'); // Or a specific parent container
-    const tracks = Array.from(document.querySelectorAll('.track'));
+    const trackContainer = document.querySelector('playlist'); // Or a specific parent container
+    const tracks = Array.from(document.querySelectorAll('track'));
 
     // Fisher-Yates shuffle
     for (let i = tracks.length - 1; i > 0; i--) {
