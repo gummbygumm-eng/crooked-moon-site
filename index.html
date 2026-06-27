@@ -94,7 +94,8 @@
     <h1>My D&D Playlist</h1>
     <button id="shuffleBtn">Shuffle Playlist</button>
 
-    <div class="track">
+  <div class="playlist">
+  <div class="track">
         <p><strong>Follow the Echo</strong> - SILAS BLACKTHORN</p>
         <audio controls>
             <source src="follow the echo (1).mp3" type="audio/mpeg">
@@ -114,7 +115,7 @@
     
     <script>
         document.getElementById('shuffleBtn').addEventListener('click', () => {
-    const trackContainer = document.querySelector('body'); // Or a specific parent container
+    const trackContainer = document.querySelector('.playlist'); // Or a specific parent container
     const tracks = Array.from(document.querySelectorAll('.track'));
 
     // Fisher-Yates shuffle
